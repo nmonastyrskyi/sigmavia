@@ -29,6 +29,7 @@ body
 
 a
 	color: inherit
+	cursor: pointer
 	transition: all 0.5s ease
 	&:hover, focus, active
 		color: $accent
@@ -89,7 +90,7 @@ a
 			margin-left: 5
 			px
 			font-weight: 500
-			vertical-align: center
+			vertical-align: middle
 	&__logo-sigma
 		height: 37px
 .sigmavia-icon
@@ -189,7 +190,6 @@ a
 			width: 83px
 			height: 6px
 
-
 	
 	&__row-1
 		align-items: center
@@ -205,9 +205,9 @@ a
 		font-size: 18px
 .wireframe
 	&:before
-
 	img
 		height: 139px
+
 .wireframe-1
 	&:after
 		background-image: url('../img/wireframes/arrow_down.png')
@@ -217,12 +217,72 @@ a
 		margin-top: 170px
 		display: block
 
-	
-
 /*WIREFRAMING SECTION END*/
 
+/*FLIGHT-SEARCH SECTION*/
+.flight-search
+	padding-top: 210px
+	padding-bottom: 82px
+	&--flex
+		display: flex
+	&--left
+		width: 365px
+	.filter-options
+		height: 115px
+		margin-top: 185px
+	.mockup
+		width: 661px
+		position: absolute
+		margin-left: 190px
+		margin-top: -40px
+		overflow-x: visible
+	&__title
+		font-size: 24px
+		color: #ee290e
+	&__desctiption
+		margin-top: 36px
+		font-size: 15px
+/*FLIGHT-SEARCH SECTION END*/
 
+/*TICKET INFO SECTION*/
+.ticket-info
+	padding-top: 150px
+	&--flex
+		align-items: center
+		justify-content: space-between
+	&__img
+		height: 268px
+	&__text
+		padding: 40px
+	&__title
+		font-size: 24px
+		color: #ee290e
+	&__description
+		font-size: 15px
 
+/*TICKET INFO SECTION END*/
+
+/*FOOTER*/
+.footer
+	padding-top: 140px
+	padding-bottom: 35px
+	&--flex
+		padding-left: 20px
+		padding-right: 20px
+
+	&__left
+		span
+			vertical-align: middle
+			font-weight: 500
+			margin-left: 10px
+	&__right
+		img
+			transform: rotate(180deg)
+		span
+			vertical-align: middle
+			font-weight: 500
+			margin-right: 10px
+/*FOOTER END*/
 
 
 @import "media" // Always at the end
