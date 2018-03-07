@@ -184,36 +184,21 @@ a
 	height: 867px	
 	background-image: url("/img/wireframing-bg.png")
 	background-size: 27.5px
+	&__arrow-right,&__arrow-left
+		img
+			width: 83px
+			height: 6px
+
+
 	
 	&__row-1
 		align-items: center
 	&__row-3
 		margin-top: 79px
+		align-items: center
 	&__row-2
 		margin-top: 57px
-		.wireframe
-			&:before
-				content: ''
-				background-image: url('../img/wireframes/arrow_left.png')	
-				width: 83px
-				height: 6px
-				position: absolute
-				margin-left: -150px
-				margin-top: 60px
-			&:last-child:before
-				display: none
-	&__row-3
-		.wireframe
-			&:before
-				content: ''
-				background-image: url('../img/wireframes/arrow_right.png')	
-				width: 83px
-				height: 6px
-				position: absolute
-				margin-left: -150px
-				margin-top: 60px
-			&:first-child:before
-				display: none
+		align-items: center
 	&__title
 		font-size: 48px
 	&__description
