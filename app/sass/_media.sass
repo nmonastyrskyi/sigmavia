@@ -1,11 +1,17 @@
 @import "vars"
 
-
 /*==========  Desktop First  ==========*/
-@media only screen and (min-width: 2048px)
-  /*HERO SECTION*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
   .hero-section
     background-image: url('/img/header_image@2x.jpg')
+  .wireframe-1:after
+    background-image: url('../img/wireframes/arrow_down@2x.png')
+    content: ''
+    height: 28px
+    background-size: contain
+    background-repeat: no-repeat
+    width: 6px
+  
 
 @media only screen and (min-width: 1920px)
   /*HERO SECTION*/

@@ -33,7 +33,6 @@ a
 	&:hover, focus, active
 		color: $accent
 		text-decoration: none
-
 .img-responsive
 	display: block
 	max-width: 100%
@@ -50,7 +49,8 @@ a
 
 .container-fluid
 	padding: 0 15px
-
+.row-reverse
+	flex-direction: row-reverse
 .uppercase
 	text-transform: uppercase
 
@@ -58,6 +58,7 @@ a
 	color: $accent
 
 
+/*HERO SECTION*/
 .hero-section
 	width: 100vw
 	height: 100vh
@@ -114,7 +115,7 @@ a
 			left: 50%
 			margin-left: -93px
 			margin-top: 60px
-	&__info-text
+	&__description-text
 		margin-top: 45px
 		font-size: 24px
 		color: #102c3a
@@ -126,6 +127,9 @@ a
 			font-size: 30px
 			font-weight: 400
 			font-style: normal
+/*HERO SECTION END*/
+
+/*WORK SECTION*/
 .work
 	&__title
 		font-size: 48px
@@ -171,6 +175,66 @@ a
 		&__info
 			font-style: 18px
 			color: #c0c0c0
+/*WORK SECTION END*/
+
+/*WIREFRAMING SECTION*/
+.wireframing
+	padding-top: 103px
+	color: #fff
+	height: 867px	
+	background-image: url("/img/wireframing-bg.png")
+	background-size: 27.5px
+	
+	&__row-1
+		align-items: center
+	&__row-3
+		margin-top: 79px
+	&__row-2
+		margin-top: 57px
+		.wireframe
+			&:before
+				content: ''
+				background-image: url('../img/wireframes/arrow_left.png')	
+				width: 83px
+				height: 6px
+				position: absolute
+				margin-left: -150px
+				margin-top: 60px
+			&:last-child:before
+				display: none
+	&__row-3
+		.wireframe
+			&:before
+				content: ''
+				background-image: url('../img/wireframes/arrow_right.png')	
+				width: 83px
+				height: 6px
+				position: absolute
+				margin-left: -150px
+				margin-top: 60px
+			&:first-child:before
+				display: none
+	&__title
+		font-size: 48px
+	&__description
+		font-size: 18px
+.wireframe
+	&:before
+
+	img
+		height: 139px
+.wireframe-1
+	&:after
+		background-image: url('../img/wireframes/arrow_down.png')
+		content: ''
+		position: absolute
+		margin-left: 120px
+		margin-top: 170px
+		display: block
+
+	
+
+/*WIREFRAMING SECTION END*/
 
 
 
