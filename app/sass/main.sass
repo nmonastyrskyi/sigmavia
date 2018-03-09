@@ -11,6 +11,8 @@
 
 html, body
 	height: 100%
+	width: 100vw
+
 
 body
 	font-size: 16px
@@ -48,6 +50,8 @@ a
 	transform: translateX(-50%)
 	max-width: 520px
 
+.container
+	width: 92%
 .container-fluid
 	padding: 0 15px
 .row-reverse
@@ -62,14 +66,11 @@ a
 /*HERO SECTION*/
 .hero-section
 	width: 100vw
+	overflow: hidden
 	height: 100vh
 	background-size: cover
 	background-image: url('/img/header_image@1920px.jpg')
 	&__outer-content
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
 		display: flex
 		height: 100vh
 	&__inner-content
@@ -87,8 +88,7 @@ a
 			width: 42px
 			height: 42px
 		&__text
-			margin-left: 5
-			px
+			margin-left: 5px
 			font-weight: 500
 			vertical-align: middle
 	&__logo-sigma
@@ -99,13 +99,13 @@ a
 	&__big-title
 		margin-top: 90px
 		font-size: 64px
-		font-weight: 400
+		font-weight: 600
 		small
 			color: #000
 			line-height: 25px
 			font-size: 0.5625em
 			display: block
-			font-weight: 300
+			font-weight: 600
 		&:after
 			content: ''
 			width: 186px
@@ -126,7 +126,7 @@ a
 			display: block
 			color: $accent-2
 			font-size: 30px
-			font-weight: 400
+			font-weight: 600
 			font-style: normal
 /*HERO SECTION END*/
 
@@ -136,46 +136,63 @@ a
 		font-size: 48px
 		font-weight: 400
 		margin-top: 92px
+		font-weight: 600
 	&__approach
 		margin-bottom: 160px
-		margin-top: 50px
+		margin-top: 60px
+		position: relative
+		&:before
+			content: ''
+			height: 1px
+			width: 796px
+			position: absolute
+			background-color: #d3ccd3
+			left: 15%
+			right: 15%
+			margin: 0 auto 
+		&__icons
 		&__item
+			position: relative
 			display: flex
 			flex-direction: column
-			justify-content: space-between
-			height: 225px
+			height: auto
 			width: 245px
-			&:after
+			&:before
 				content: ''
+				background-image: url('/img/how_we_work_circle.png')
+				border-right: 30px solid white
+				border-left: 30px solid white
+				background-repeat: no-repeat
 				position: absolute
-				top: 15px
-				left: 180px
-				width: 202px
-				height: 1px
-				display: block
-				background-color: #d3ccd3
-		&__item:first-child
-			margin-right: 20px
-			&:after
-				left: 196px
-		&__item:last-child:after
-			display: none
-			
-		.plane
-			height: 50px
-			margin-top: -18px
-			margin-bottom: -20px
-		.circle
-			height: 16px
-
+				left: 0
+				right: 0
+				width: 76px
+				height: 16px
+				margin: -8px auto 0
+				top:  calc(0 - $work-item-padding-top)
+		&__item.active
+			&:before
+				display: none
 		&__name
 			color: $accent-3
 			font-size: 24px
 			height: 52px
+			margin-bottom: 40px
+			margin-top: 40px
 
 		&__info
-			font-style: 18px
+			font-size: 18px
 			color: #c0c0c0
+.plane
+	background-image: url('/img/how_we_work_plane.png')
+	z-index: 5
+	position: absolute
+	height: 50px
+	width: 49px
+	top: 0
+	left: 50%
+	transform: translateX(-50%)
+	margin-top: -25px
 /*WORK SECTION END*/
 
 /*WIREFRAMING SECTION*/
@@ -189,8 +206,6 @@ a
 		img
 			width: 83px
 			height: 6px
-
-	
 	&__row-1
 		align-items: center
 	&__row-3
@@ -213,8 +228,10 @@ a
 		background-image: url('../img/wireframes/arrow_down.png')
 		content: ''
 		position: absolute
-		margin-left: 120px
 		margin-top: 170px
+		margin-left: 50%
+		left: 0
+    transform: translateX(-50%)
 		display: block
 
 /*WIREFRAMING SECTION END*/
@@ -222,6 +239,7 @@ a
 /*FLIGHT-SEARCH SECTION*/
 .flight-search
 	padding-top: 210px
+	// display: none
 	padding-bottom: 82px
 	&--flex
 		display: flex
@@ -234,6 +252,7 @@ a
 		width: 661px
 		position: absolute
 		margin-left: 190px
+		padding-right: 17px
 		margin-top: -40px
 		overflow-x: visible
 	&__title
@@ -246,10 +265,12 @@ a
 
 /*TICKET INFO SECTION*/
 .ticket-info
+	// display: none
 	padding-top: 150px
 	&--flex
 		align-items: center
 		justify-content: space-between
+		margin: 0
 	&__img
 		height: 268px
 	&__text
@@ -269,19 +290,21 @@ a
 	&--flex
 		padding-left: 20px
 		padding-right: 20px
+		margin-right: 0
 
 	&__left
+		margin-left: 20px
 		span
 			vertical-align: middle
 			font-weight: 500
-			margin-left: 10px
+			margin-left: 20px
 	&__right
 		img
 			transform: rotate(180deg)
 		span
 			vertical-align: middle
 			font-weight: 500
-			margin-right: 10px
+			margin-right: 20px
 /*FOOTER END*/
 
 
